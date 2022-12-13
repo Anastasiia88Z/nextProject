@@ -1,9 +1,13 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import { Navbar } from '../components/Navbar'
 import styles from '../styles/Home.module.css'
 
 export default function HomePage() {
   return (
     <div className={styles.container}>
+
+      <Navbar />
 
       <Head>
         <title>Home - Anastasiia</title>
@@ -13,8 +17,11 @@ export default function HomePage() {
 
       <main className={styles.main}>
 
+        <h1>Home page</h1>
+
         <h1 className={styles.title}>
-          Ir a <a href="/about">About</a>
+          {/* Ir a <a href="/about">About</a> */}
+          Ir a <Link href="/about">About</Link>
         </h1>
 
         <p className={styles.description}>

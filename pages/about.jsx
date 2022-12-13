@@ -1,20 +1,28 @@
+
+import { Navbar } from '../components/Navbar'
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
-export default function About() {
+export default function AboutPage() {
   return (
     <div className={styles.container}>
 
+      <Navbar />
+
       <Head>
-        <title>Home - Anastasiia</title>
+        <title>About - Anastasiia</title>
         <meta name="description" content="About Page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
 
+        <h1>About page</h1>
+
         <h1 className={styles.title}>
-          Ir a <a href="/">Home</a>
+          {/* Ir a <a href="/">Home</a> */}
+          Ir a <Link href="/">Home</Link>
         </h1>
 
         <p className={styles.description}>
