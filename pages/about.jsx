@@ -1,37 +1,21 @@
-
-import { Navbar } from '../components/Navbar'
-import Head from 'next/head'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import Link from 'next/link';
+import styles from '../styles/globals.css';
+import { MainLayout } from '../components/layouts/MainLayout';
 
 export default function AboutPage() {
   return (
-    <div className={styles.container}>
+    <MainLayout>
+      <h1>About page</h1>
 
-      <Navbar />
+      <h1 className={'title'}>
+        Ir a <Link href="/">Home</Link>
+      </h1>
 
-      <Head>
-        <title>About - Anastasiia</title>
-        <meta name="description" content="About Page" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <p className={styles.description}>
+        Get started by editing{' '}
+        <code className={'code'}>pages/about.jsx</code>
+      </p>
 
-      <main className={styles.main}>
-
-        <h1>About page</h1>
-
-        <h1 className={styles.title}>
-          {/* Ir a <a href="/">Home</a> */}
-          Ir a <Link href="/">Home</Link>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/about.jsx</code>
-        </p>
-
-      </main>
-
-    </div>
+    </MainLayout >
   )
 }
