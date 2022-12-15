@@ -1,21 +1,30 @@
 import Link from 'next/link';
-import styles from '../styles/globals.css';
+import { DarkLayout } from '../components/layouts/DarkLayout';
 import { MainLayout } from '../components/layouts/MainLayout';
 
 export default function AboutPage() {
   return (
-    <MainLayout>
+    <>
       <h1>About page</h1>
 
       <h1 className={'title'}>
         Ir a <Link href="/">Home</Link>
       </h1>
 
-      <p className={styles.description}>
+      <p className={'description'}>
         Get started by editing{' '}
         <code className={'code'}>pages/about.jsx</code>
       </p>
+    </>
+  )
+}
 
-    </MainLayout >
+AboutPage.getLayout = function getLayout(page) {
+  return (
+    <MainLayout>
+      <DarkLayout>
+        {page}
+      </DarkLayout>
+    </MainLayout>
   )
 }

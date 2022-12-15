@@ -1,11 +1,10 @@
 import Link from 'next/link';
-import styles from '../styles/globals.css';
-import { MainLayout } from '../components/layouts/MainLayout';
+import { MainLayout } from '../../components/layouts/MainLayout.jsx';
 
-export default function ContactPage() {
+export default function HomePage() {
     return (
         <MainLayout>
-            <h1>Contact page</h1>
+            <h1>Pricing page</h1>
 
             <h1 className={'title'}>
                 Ir a <Link href="/">Home</Link>
@@ -13,7 +12,8 @@ export default function ContactPage() {
 
             <p className={'description'}>
                 Get started by editing{' '}
-                <code className={'code'}>pages/contact.jsx</code>
+                <code className={'code'}>pages/pricing/
+                    pricing.jsx</code>
             </p>
         </MainLayout>
     )
